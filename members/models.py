@@ -61,7 +61,7 @@ class User(AbstractBaseUser):
     def has_perm(self, perm, obj=None): # 권한 검사 메서드, 관리자 페이지나 특정 작업에 대한 접근 권한이 필요한 경우 실행
         return True
 
-    def has_module_perm(self, app_label):
+    def has_module_perms(self, app_label):
         return True
 
     @property
