@@ -1,3 +1,4 @@
+from django import forms
 from django.contrib.auth import get_user_model
 # 현재 설정된 사용자 모델을 가져옴, 커스터마이징한 사용자 모델을 가져올 경우
 # get_use_model()을 사용해야 올바른 모델을 참조함
@@ -9,6 +10,12 @@ User = get_user_model() # 사용 중인 사용자 모델 User를 변수로 저�
 
 class SignupForm(UserCreationForm):
     # 기본 사용자 생성 폼(UserCreationForm)을 확장한 커스터마이징 된 사용자 회원가입 폼
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        class_update_fields = ('password1', 'password2')
+        for field in class_update_fields:
+            if field.startswith('password'):
+                self.fields[field].label = '비밀번호'
 
     class Meta(UserCreationForm.Meta):
         model = User
