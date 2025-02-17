@@ -10,10 +10,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-%6kwqum&(1!yik#)j^&2f1sboq9tn6i_)zbkuivpz5ppgqr109'
 
+NAVER_CLIENT_ID = "FGOdxvle6T4p0u9rtdlr"
+NAVER_SECRET = "jqr28k6bAl"
+
+GITHUB_CLIENT_ID = "Ov23liLqVcpf5dml0UK5"
+GITHUB_SECRET = "30cab2d40b2f04962ee85a37043e2ff9b1504a51"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -28,6 +34,7 @@ INSTALLED_APPS = [
 
     # own
     'members',
+    'post',
 
     # third party
     'django_extensions',

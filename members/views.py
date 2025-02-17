@@ -9,8 +9,8 @@ from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views.generic import DetailView, FormView
 
-from member.forms import LoginForm, SignupForm
-from member.models import UserFollowing
+from members.forms import LoginForm, SignupForm
+from members.models import UserFollowing
 from utils.email import send_email
 
 User = get_user_model()

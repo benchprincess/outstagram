@@ -21,7 +21,7 @@ from django.contrib import admin
 from django.contrib.auth.views import LogoutView
 from django.urls import include, path
 
-from member import views as member_views
+from members import views as member_views
 from post import views as post_views
 
 urlpatterns = [
@@ -45,8 +45,8 @@ urlpatterns = [
 
     # include
     path('comment/', include('post.comment_urls')),
-    path('profile/', include('member.urls')),
-    path('oauth/', include('member.oauth_urls')),
+    path('profile/', include('members.urls')),
+    path('oauth/', include('members.oauth_urls')),
 
     # path('signup/done/', TemplateView.as_view(template_name='auth/signup_done.html'),
     #      name='signup_done'),

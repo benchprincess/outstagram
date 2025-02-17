@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pystagram"
+name = "outstagram"
 version = "0.1.0"
 description = ""
 authors = ["jiwon hwang <realjiwon98@naver.com>"]

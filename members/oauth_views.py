@@ -10,7 +10,7 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.views.generic import RedirectView
 
-from member.forms import NicknameForm
+from members.forms import NicknameForm
 
 User = get_user_model()
 
@@ -40,6 +40,7 @@ class NaverLoginRedirectView(RedirectView):
             'redirect_uri': callback_url,
             'state': state
         }
+        print("🔍 네이버 로그인 요청 URL:", f"{NAVER_LOGIN_URL}?{urlencode(params)}")
 
         return f'{NAVER_LOGIN_URL}?{urlencode(params)}'
 
