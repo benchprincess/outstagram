@@ -122,6 +122,9 @@ STATICFILES_DIRS = [
 # 배포할 때 씀
 STATIC_ROOT = BASE_DIR / '.static_root'
 
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = 'abcd'
+
 
 
 
